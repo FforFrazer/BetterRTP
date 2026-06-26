@@ -173,7 +173,7 @@
         <dependency>
             <groupId>org.purpurmc.purpur</groupId>
             <artifactId>purpur-api</artifactId>
-            <version>1.26.2-R0.1-SNAPSHOT</version>
+            <version>26.1.2.build.2592-stable</version>
             <scope>provided</scope>
         </dependency>
         <!-- Vault -->
