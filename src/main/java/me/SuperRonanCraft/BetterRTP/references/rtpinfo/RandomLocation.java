@@ -142,7 +142,7 @@ public class RandomLocation {
         //Check Biomes
         if (biomes == null || biomes.isEmpty())
             return false;
-        String biomeCurrent = world.getBiome(x, z).name();
+        String biomeCurrent = world.getBiome(x, 64, z).name();
         for (String biome : biomes)
             if (biomeCurrent.toUpperCase().contains(biome.toUpperCase()))
                 return false;
@@ -172,7 +172,7 @@ public class RandomLocation {
             try {
                 ChunkSnapshot snapshot = chunk.getChunkSnapshot(true, true, false);
                 int maxy = snapshot.getHighestBlockYAt(8, 8);
-                Biome biome = snapshot.getBiome(8, 8);
+                Biome biome = snapshot.getBiome(8, 64, 8);
                 //BetterRTP.getInstance().getLogger().info("Added " + chunk.getX() + " " + chunk.getZ());
                 BetterRTP.getInstance().getDatabaseHandler().getDatabaseChunks().addChunk(chunk, maxy, biome);
             } catch (Throwable e) {
